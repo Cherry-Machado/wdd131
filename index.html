@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Website</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Cherry Machado</title>
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals | Cherry Machado | This is my Home Page">
+    <meta name="author" content="Cherry Machado">
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/getdates.js"></script>
 </head>
-<body>
-    <h1>WDD-131 Dynamic Web Fundamentals</h1>
+
+<body class="grid">
+    <header class="grid__item header">
+        <h1 class="header__title">WDD131: Dynamic Web Fundamentals - <span class="header__title-name">Cherry
+                Machado</span></h1>
+        <nav class="nav-content">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/cherry-machado/" class="enlaces" target="_blank" rel="noopener">Linkedin</a></li>
+                <li><a href="https://byui.instructure.com/" class="enlaces" target="_blank" rel="noopener">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" class="enlaces" target="_blank" rel="noopener">Scripture</a></li>
+                <li><a href="#" class="enlaces" target="_blank" rel="noopener">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="card card__item-1">
+            <h1 class="card__title-1">About Me</h1>
+            <article class="card__portfolio">
+                <div class="card__title-1-top">
+                    <p class="card__description">My name is Cherry and I'm living in Sao Paulo, Brazil. I was born in Guanare, Venezuela. I am
+                            currently working at the security area, but I'd like to work in the programming field. I love
+                            spending time reading the scriptures and learning about programming stuffs. I like reading news and
+                        being updated about what happens in the world.</p>
+                    <figure class="card_figure-cherry">
+                        <img src="images/Foto_Cherry.png" alt="Photo Cherry Machado" />
+                    </figure>
+                </div>
+                <h1 class="card__title-1-medio">Guanare, Venezuela</h1>
+                <div class="raya"></div>
+                <div class="card__title-1-top2">
+                    <figure class="card_figure-country">
+                        <img src="images/Flag_of_Venezuela.png" alt="Flag of Venezuela" />
+                        <figcaption class="caption">Official Flag of Venezuela</figcaption>
+                    </figure>
+                    <p class="card__description-2">Venezuela, officially the Bolivarian Republic of Venezuela, is a sovereign country located in the northern part of South America and the Caribbean, comprising a continental area and a large number of islands and islets in the Caribbean Sea, with its capital and largest urban center being the city of Caracas.</p>
+                </div>
+            </article>
+        </section>
+        <section class="card card__item-2">
+            <h1 class="card__title-1 card__title-2">Web Dev Resources</h1>
+            <article class="card__portfolio">
+                <ul class="card__navigation">
+                    <li class="card__navigation-item">
+                        <a href="#">Dev.to Community</a>
+                    </li>
+                    <li class="card__navigation-item">
+                        <a href="#">Smashing Magazine</a>
+                    </li>
+                    <li class="card__navigation-item">
+                        <a href="#">CSS Tricks</a>
+                    </li>
+                    <li class="card__navigation-item">
+                        <a href="#">W3 Schools</a>
+                    </li>
+                    <li class="card__navigation-item">
+                        <a href="#">Udemy</a>
+                    </li>
+                    <li class="card__navigation-item">
+                        <a href="#">Lorem Picsum Image Placeholder</a>
+                    </li>
+                </ul>
+            </article>
+            </section>
+    </main>
+    <footer class="footer">
+        <p>© <span id="currentyear"></span> 🍒 Cherry Machado 🍒 Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
