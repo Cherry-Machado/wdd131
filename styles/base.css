@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Englebert&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #174E70;
+    --secondary-color: #fff;
+    --accent1-color: yellow;
+    --accent2-color: #333333;
+    --card-background: #f4f4f4
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: large;
+   /*height: calc(100vh - 75vw);*/
+    height: 100vh;
+    margin-top: -75vw;
+    padding-top: 75vw;
+}
+
+.header__title {
+    font-family: "Poetsen One", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header__title-name {
+    color: var(--accent1-color);
+}
+
+nav {
+    background-color: var(--accent2-color)
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+}
+
+nav a:active {
+    color: var(--accent1-color);
+}
+
+.main {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card__item-1 {
+    grid-column: 1/3;
+}
+.card {
+    position: relative;
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #c7c3c3;
+    margin: 20px 0;
+}
+
+.card__portfolio {
+    margin-top: 2.5rem;
+}
+.card__title-1-top {
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card__title-1-top2 {
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    padding-top: .9rem;
+}
+
+.card__title-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    color: var(--secondary-color);
+    font-size: 25px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    
+}
+
+.card__title-1-medio {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__description-2 {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: .5rem;
+}
+
+.raya {
+    width: 80%;
+    height: 0.5px;
+    background-color: #c7c3c3;
+    margin: 0 auto;
+}
+
+.card_figure-cherry img {
+    width: 95%;
+}
+
+.card_figure-country img {
+    width: 90%;
+}
+
+.caption {
+    font-size: small;
+    font-style: italic;
+}
+.card__navigation {
+    margin-top: 50%;
+    padding-left: 1rem;
+    list-style-type:disc;
+}
+
+.card__navigation-item {
+    padding-bottom: .5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent2-color);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem;
+}
+
+#lastModified {
+    margin-top: 0.3rem;
+}
+/* Larger views *********************************************/
+@media (min-width: 640px) {
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+.card__title-1-top, .card__title-1-top2 {
+    flex-direction: column;
+    
+}
+
+.caption {
+    text-align: center;
+}
+
+.card_figure-cherry {
+    order: -1
+    
+}
+
+.card__navigation {
+    margin-top: 80%;
+}
+
+.card__title-2 {
+    font-size: 20px;
+    padding: 1rem 0;
+}
+}
+
+@media screen and (max-width:1200px) {
+    .card__title-1-top, .card__title-1-top2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .caption {
+        text-align: center;
+    }
+    
+    .card_figure-cherry {
+        order: -1;
+        padding-bottom:.5rem;
+        padding-top: .5rem;
+    }
+
+    .card_figure-cherry img {
+        width: 55%;
+    }
+
+    .header__title {
+       
+        font-weight: 400;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .card__navigation {
+        margin-top: 70%;
+    
+    }
+
+    .card__title-2 {
+        font-size: 22px;
+        padding: 1rem;
+    }
+
+    }
