@@ -55,6 +55,10 @@ a {
     color: dodgerblue;
 }
 
+a:hover {
+    color: dodgerblue;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
