@@ -1,65 +1,66 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Roboto", sans-serif;
-  }
-  header{
+}
+
+header {
     background-color: #3C0A64;
-  }
-  
-  li{
+}
+
+li {
     list-style: none;
-  }
-  
-  a{
+}
+
+a {
     color: white;
     text-decoration: none;
-  }
-  
-  .container{
+}
+
+.container {
     /* max-width: 1224px; */
     width: 95%;
     margin: 0 auto;
-  }
-  
-  .navbar{
+}
+
+.navbar {
     min-height: 70px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  .nav-branding{
+}
+
+.nav-temple {
     font-size: 2rem;
-  }
-  
-  .nav-menu{
+    color: #fff;
+}
+
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
     font-size: 1.5rem;
-  }
-  
-  .nav-link{
+}
+
+.nav-link {
     transition: 0.3s ease-out;
-  }
-  
-  .nav-link:hover{
+}
+
+.nav-link:hover {
     color: dodgerblue;
-  }
-  
-  .hamburger{
+}
+
+.hamburger {
     display: none;
     cursor: pointer;
-  }
-  
-  .bar{
+}
+
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -67,37 +68,37 @@
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: white;
-  }
+}
 
-  .main_container {
+.main_container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-  }
+}
 
-  .main_title {
+.main_title {
     margin: 30px auto;
     font-size: 1.5rem;
     text-align: center;
-  }
+}
 
-  .main_container-grid {
+.main_container-grid {
     padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-  }
+}
 
-  .main_container-item {
+.main_container-item {
     padding-bottom: 50px;
-  }
+}
 
-  .main_container-img {
+.main_container-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
 figcaption {
     text-align: center;
@@ -105,7 +106,7 @@ figcaption {
 }
 
 footer {
-    background-color:  #3C0A64;
+    background-color: #3C0A64;
     color: #fff;
     font-weight: 300;
     text-align: center;
