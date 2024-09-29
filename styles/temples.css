@@ -22,7 +22,6 @@ a {
 }
 
 .container {
-    /* max-width: 1224px; */
     width: 95%;
     margin: 0 auto;
 }
@@ -55,7 +54,7 @@ a {
     color: dodgerblue;
 }
 
-a:hover {
+.nav-item a:hover {
     color: dodgerblue;
 }
 
