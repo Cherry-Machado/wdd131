@@ -10,3 +10,7 @@ This is my Basic Grid Layout: https://cherry-machado.github.io/wdd131/week01/bas
 # Week 02
 
 This is my Media query example page: https://cherry-machado.github.io/wdd131/week02/media-query.html
+
+# Week 03
+
+This is my Web Design Princicples page: https://cherry-machado.github.io/wdd131/week03/design.html
