@@ -13,4 +13,4 @@ This is my Media query example page: https://cherry-machado.github.io/wdd131/wee
 
 # Week 03
 
-This is my Web Design Princicples page: https://cherry-machado.github.io/wdd131/week03/design.html
+This is my Web Design Principles page: https://cherry-machado.github.io/wdd131/week03/design.html
