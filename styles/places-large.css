@@ -78,4 +78,8 @@
     padding: 0px;
   }
 
+  picture{
+    display: none;
+  }
+
 }
