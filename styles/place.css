@@ -41,6 +41,16 @@ body {
     position: relative;
 }
 
+.main__hero {
+    width: auto;
+}
+
+.main .main__hero img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}
+
 .card__item-1,
 .card__item-2 {
     border: 1px solid var(--border-color-1);
