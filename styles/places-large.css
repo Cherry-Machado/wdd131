@@ -1,6 +1,6 @@
 /* large view navigation ***********************************/
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
 
   .card__item-1 {
     left: 2rem;
@@ -12,7 +12,7 @@
   }
 }
 
-@media screen and (max-width: 501px) {
+@media (max-width: 501px) {
   html {
     position: relative
   }
