@@ -1,0 +1,81 @@
+/* large view navigation ***********************************/
+
+@media(max-width: 1000px) {
+
+  .card__item-1 {
+    left: 2rem;
+  }
+
+  .card__item-2 {
+    right: 2.5rem;
+    bottom: 3rem;
+  }
+}
+
+@media(max-width: 501px) {
+  html {
+    position: relative
+  }
+
+  :root {
+    --card-item-text-color: #140606;
+  }
+
+  .main {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .card__item-1 {
+    position: inherit;
+    padding-top: 0rem;
+    text-align: center;
+    border: 0;
+  }
+
+  .card__item-2 {
+    position: inherit;
+    padding-top: 0;
+    text-align: center;
+    border: 0;
+  }
+
+  .card-title-container {
+    position: inherit;
+  }
+
+  .card__title-1 {
+    color: var(--card-item-text-color);
+    position: inherit;
+    padding: 1rem;
+    background-color: transparent;
+  }
+
+  .card__list__title {
+    margin-left: 120px;
+  }
+
+  .card__title-2 {
+    color: var(--card-item-text-color);
+    background-color: transparent;
+    position: inherit;
+
+  }
+
+  .card__title-2-span {
+    display: none;
+  }
+
+  .card__before__image-svg::before {
+    content: url(../images/weather_clouds_sun_sunny_icon.svg);
+  }
+
+  .card__items__container {
+    border-color: transparent;
+    padding: 0px;
+  }
+
+}
