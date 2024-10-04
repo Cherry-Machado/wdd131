@@ -92,7 +92,7 @@ body {
 .card__title-2 {
     color: var(--first-font-color);
     background-color: var(--title-background-color);
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 2rem .3rem 2rem;
     position: absolute;
     bottom: 8rem;
     left: -.7rem;
