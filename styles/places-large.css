@@ -29,6 +29,10 @@
     align-items: stretch;
   }
 
+  picture {
+    position: relative;
+  }
+
   .card__item-1 {
     position: inherit;
     padding-top: 0rem;
