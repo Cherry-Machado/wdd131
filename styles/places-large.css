@@ -69,8 +69,16 @@
     display: none;
   }
 
-  .card__before__image-svg::before {
+  .card__title-2::after {
     content: url(../images/weather_clouds_sun_sunny_icon.svg);
+    
+  }
+  
+  h2.card__title-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .card__items__container {
