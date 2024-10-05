@@ -60,6 +60,7 @@
 
   .card__title-2 {
     color: var(--card-item-text-color);
+    padding: 1rem 2.4rem 1rem 2rem;
     background-color: transparent;
     position: inherit;
 
