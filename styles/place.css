@@ -99,6 +99,8 @@ body {
     bottom: 8rem;
     left: -.7rem;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card__title-2-span {
