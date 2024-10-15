@@ -75,9 +75,10 @@ footer {
     background-color: rgb(6, 45, 45);
     color: #fff;
     font-weight: 300;
+    font-size: small;
     text-align: center;
     padding: 1rem;
-    width: 55%;
+    width: 50%;
     height: auto;
     margin: 0 auto;
     border-radius: 0 0 100px 100px;
