@@ -1,0 +1,9 @@
+The website project subject:  A website about the LDS Church and two free tools for visitors.
+
+
+
+A brief description of the planned site content: A site about the LDS Church with a landing page that involves creating a captivating image gallery about Jesus Christ with rotating images and two navigation buttons. When the user clicks one of the pictures, the site will take the user to the LDS Church home page to learn more about the Savior. Apart from the "About Us" and  "Contact Us" menu options, the site will also have two more options, one to create a modern to do list and the other to create a websites BookKeeper.
+
+
+
+The reason you chose this subject: I think that preaching the Gospel of Jesus Christ is a commandment, and doing this website and also adding some free helping tools to website visitors, is a way to fulfill this commandment and serve others.
