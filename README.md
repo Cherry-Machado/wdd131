@@ -17,3 +17,6 @@ This is my Web Design Principles page: https://cherry-machado.github.io/wdd131/w
 
 This is my Place page: https://cherry-machado.github.io/wdd131/place.html
 
+# Week 04
+
+This is my Picture Album Enhancement Page: https://cherry-machado.github.io/wdd131/filtered-temples.html
