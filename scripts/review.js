@@ -16,14 +16,14 @@ window.onload = function() {
     document.getElementById('currentyear').textContent = new Date().getFullYear();
 };
 
-function goBack() {
-    window.location.href = "form.html"; 
-};
-
 // Function to restart Reviews and return
 function clearStorage() {
     reviewCounter = 0;
     localStorage.clear();
+    window.location.href = "form.html"; 
+};
+
+function goBack() {
     window.location.href = "form.html"; 
 };
 
