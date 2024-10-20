@@ -84,6 +84,14 @@ main {
     margin-right: 6px;
 }
 
+.wf1 input[type="checkbox"]:active {
+    margin-right: 60px;
+}
+
+.wf1 input[type="checkbox"]:checked {
+    accent-color: green;
+}
+
 #written-text {
     resize: none;
     height: 150px;
