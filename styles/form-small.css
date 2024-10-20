@@ -1,8 +1,15 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
 
 /*----------- apply a natural box layout model to all elements --------------*/
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 
 /*----------- BODY --------------*/
@@ -18,6 +25,7 @@ header {
     background-color: #ddd;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
     font-size: 1.7rem;
@@ -34,6 +42,7 @@ main {
     width: 100%;
     margin: 0 auto;
 }
+
 .wf1 fieldset {
     margin: 2rem 0;
     border: 1px solid #ddd;
@@ -50,7 +59,7 @@ main {
 }
 
 .wf1 div {
-    padding-top: 1rem ;
+    padding-top: 1rem;
     color: #445ba9;
     font-size: .9rem;
 }
@@ -116,9 +125,9 @@ button,
 }
 
 .wf1 input[type="submit"]:hover {
-    color:aqua;
+    color: aqua;
     box-shadow: 5px 5px 15px #999;
-} 
+}
 
 button {
     display: block;
@@ -129,13 +138,13 @@ button {
     cursor: pointer;
 }
 
-button:hover{
-    color:aqua;
+button:hover {
+    color: aqua;
     box-shadow: 5px 5px 15px #999;
 
 }
 
-.review-paragraph{
+.review-paragraph {
     margin-top: 3rem;
     font-size: 1.3rem;
 }
@@ -160,39 +169,39 @@ button:hover{
 /* stars */
 
 input[type="radio"] {
-	display: none;
-	position: relative;
-	caret-color: rgba(0, 0, 0, 0);
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
 }
 
 #rating {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
 }
 
-#rating > label {
-	color: #9c2c13;
-	width: 30px;
-	height: 30px;
+#rating>label {
+    color: #9c2c13;
+    width: 30px;
+    height: 30px;
     margin-top: -1.3rem;
     margin-bottom: .8rem;
-	font-size: 2rem;
-	display: flex;
-	align-items: center;
-	caret-color: rgba(0, 0, 0, 0); 
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    caret-color: rgba(0, 0, 0, 0);
 }
 
-#rating > label:hover {
-	color: #000;
+#rating>label:hover {
+    color: #000;
 }
 
-#rating > label::before {
-	content: "\2606";
+#rating>label::before {
+    content: "\2606";
 }
 
-#rating input:checked ~ label::before {
-	content: "\2605";
+#rating input:checked~label::before {
+    content: "\2605";
 }
 
 /*----------- FOOTER --------------*/
