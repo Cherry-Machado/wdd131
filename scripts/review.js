@@ -17,7 +17,7 @@ window.onload = function() {
 };
 
 function goBack() {
-    window.location.href = "../form.html"; 
+    window.location.href = "form.html"; 
 }
 
 // Function to restart Reviews and return
