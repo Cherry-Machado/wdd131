@@ -24,6 +24,6 @@ function goBack() {
 function clearStorage() {
     reviewCounter = 0;
     localStorage.clear();
-    window.location.href = "../wdd131/form.html"; 
+    window.location.href = "form.html"; 
 }
 
