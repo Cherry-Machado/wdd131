@@ -18,12 +18,12 @@ window.onload = function() {
 
 function goBack() {
     window.location.href = "form.html"; 
-}
+};
 
 // Function to restart Reviews and return
 function clearStorage() {
     reviewCounter = 0;
     localStorage.clear();
     window.location.href = "form.html"; 
-}
+};
 
