@@ -17,13 +17,14 @@ window.onload = function() {
 };
 
 // Function to restart Reviews and return
-function clearStorage() {
+
+const mybuttonReturn = document.querySelector(".buttonReturn");
+mybuttonReturn.addEventListener("click", () => window.location.href = "form.html");
+
+const mybuttonReturnRst = document.querySelector(".buttonReturnRst");
+mybuttonReturnRst.addEventListener("click", () => {
     reviewCounter = 0;
     localStorage.clear();
     window.location.href = "form.html"; 
-};
-
-function goBack() {
-    window.location.href = "form.html"; 
-};
+});
 
