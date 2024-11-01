@@ -11,23 +11,19 @@ cardButtons.forEach((button) => {
   });
 });
 
-// Cerrar el modal con el botón de cancelar
 cancelButton.addEventListener("click", (e) => {
   e.preventDefault();
   dialog.close();
 });
 
-// Botón de solicitar orçamento que abre un nuevo modal
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   dialog.close();
   abrirOrcamentoModal(); // Llama a la función para mostrar el modal de orçamento
 });
 
-// Placeholder de la función para el modal de orçamento
 function abrirOrcamentoModal() {
-  // Implementación del modal de orçamento aquí
-  alert("Abriendo modal de orçamento"); // Solo un mensaje de prueba
+  window.location.href = "#orcamento";
 }
 
 /********************************************************************/
@@ -389,8 +385,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 document.querySelector(".wf1").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -401,11 +395,13 @@ document.querySelector(".wf1").addEventListener("submit", function (e) {
 
   const servicesOptionsElement = document.querySelector(".services__options");
   const servicesOptionsSelected = servicesOptionsElement
-    ? Array.from(servicesOptionsElement.selectedOptions).map(option => option.value)
+    ? Array.from(servicesOptionsElement.selectedOptions).map(
+        (option) => option.value
+      )
     : [];
 
-    console.log(servicesOptionsElement);
-    console.log(servicesOptionsSelected);
+  console.log(servicesOptionsElement);
+  console.log(servicesOptionsSelected);
 
   if (!nome || !email || !validarEmail(email) || !validarTelefone(phone)) {
     mostrarMensaje("Por favor, preencha o formulário corretamente.");
@@ -421,37 +417,41 @@ document.querySelector(".wf1").addEventListener("submit", function (e) {
     quantidade: document.querySelector('input[name="fnum"]').value,
     servico: servicesOptionsSelected,
     data: document.querySelector("#date").value,
-    orcamentoVias: Array.from(document.querySelectorAll("input[type='checkbox']:checked")).map(cb => cb.value),
-    detalles: document.querySelector("#written-text").value
+    orcamentoVias: Array.from(
+      document.querySelectorAll("input[type='checkbox']:checked")
+    ).map((cb) => cb.value),
+    detalles: document.querySelector("#written-text").value,
   };
 
+  // Inicializa las opciones del campo "services__options" en el DOM
+  document.addEventListener("DOMContentLoaded", function () {
+    const selectElements = document.querySelectorAll(".services__options");
 
-// Inicializa las opciones del campo "services__options" en el DOM
-document.addEventListener("DOMContentLoaded", function () {
-  const selectElements = document.querySelectorAll(".services__options");
+    if (selectElements.length > 0) {
+      selectElements.forEach((selectElement) => {
+        Object.keys(servicesOptions).forEach((group) => {
+          const optgroup = document.createElement("optgroup");
+          optgroup.label = group;
 
-  if (selectElements.length > 0) {
-    selectElements.forEach(selectElement => {
-      Object.keys(servicesOptions).forEach(group => {
-        const optgroup = document.createElement("optgroup");
-        optgroup.label = group;
+          servicesOptions[group].forEach((optionText) => {
+            const option = document.createElement("option");
+            option.textContent = optionText;
+            option.value = optionText; // Asegúrate de que cada opción tenga un valor
+            optgroup.appendChild(option);
+          });
 
-        servicesOptions[group].forEach(optionText => {
-          const option = document.createElement("option");
-          option.textContent = optionText;
-          option.value = optionText; // Asegúrate de que cada opción tenga un valor
-          optgroup.appendChild(option);
+          selectElement.appendChild(optgroup);
         });
-
-        selectElement.appendChild(optgroup);
       });
-    });
-    console.log("Opciones de servicios cargadas correctamente en 'services__options'");
-  } else {
-    console.error("El elemento 'services__options' no se encontró en el DOM.");
-  }
-});
-
+      console.log(
+        "Opciones de servicios cargadas correctamente en 'services__options'"
+      );
+    } else {
+      console.error(
+        "El elemento 'services__options' no se encontró en el DOM."
+      );
+    }
+  });
 
   // Recuperar datos existentes en localStorage o inicializar como arreglo vacío
   let savedData = JSON.parse(localStorage.getItem("formData")) || [];
@@ -468,7 +468,10 @@ document.addEventListener("DOMContentLoaded", function () {
   localStorage.setItem("formData", JSON.stringify(savedData));
 
   // Mostrar mensaje de éxito
-  mostrarMensaje("Obrigado pela sua solicitação de Orçamento ou Contato! <br> Sua solicitação foi enviada com sucesso!", true);
+  mostrarMensaje(
+    "Obrigado pela sua solicitação de Orçamento ou Contato! <br> Sua solicitação foi enviada com sucesso!",
+    true
+  );
 
   // Redireccionar después de 2 segundos
   setTimeout(() => {
