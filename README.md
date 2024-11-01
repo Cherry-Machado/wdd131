@@ -29,4 +29,4 @@ This is my Form Project: https://cherry-machado.github.io/wdd131/form.html
 
 # Week 06
 
-This is my final Proyect: https://cherry-machado.github.io/wdd131/final-proyect.html
+This is my final Proyect: https://cherry-machado.github.io/wdd131/final-project.html
