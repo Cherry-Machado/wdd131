@@ -23,7 +23,7 @@ submitButton.addEventListener("click", (e) => {
 });
 
 function abrirOrcamentoModal() {
-  window.location.href = "#orcamento";
+  window.location.hash = "#orcamento";
 }
 
 /********************************************************************/
