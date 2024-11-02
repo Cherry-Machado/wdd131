@@ -157,6 +157,50 @@ body{
   margin-top: 1.2em;
 
 }
+
+.sobrenos__container-picture{
+  background-image: var(--back-button);
+  border: 1px solid var(--white);
+  padding: 1em;
+  border-radius: 3em;
+    transition: 1s;
+    align-self: self-start;
+    box-shadow: 10px 10px 20px #8b8b8b;
+        
+}
+
+.sobrenos__container-picture:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.sobrenos__container-picture img{
+  border-radius: 2em;
+  box-shadow:
+  inset 0 0em 3em var(--bright-cyan),
+  0 0 0 2px var(--white),
+  0em 0em 1em var(--dark-blue);
+}
+
+.sobrenos__container-picture img:hover{
+  box-shadow:
+  inset 0 0em 3em var(--bright-cyan),
+  0 0 0 3px var(--white),
+  0em 0em 3em var(--dark-blue);
+}
+
+.sobrenos__container-img-legend{
+  color: var(--white);
+  text-shadow: var(--text-shadow-1);
+  padding-top: .6em;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  font-weight: bold;
+}
+
 .title, .budget-title{
     font-size: 2rem;
     font-weight: 400;
