@@ -19,12 +19,17 @@ cancelButton.addEventListener("click", (e) => {
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   dialog.close();
-  abrirOrcamentoModal(); // Llama a la función para mostrar el modal de orçamento
+  irAOrcamento();
+ 
 });
 
-function abrirOrcamentoModal() {
-  window.location.hash = "#orcamento";
+function irAOrcamento() {
+  window.location.hash = "#orcamento"; 
+  setTimeout(() => {
+      window.location.replace(window.location.href.split('#')[0]);
+  }, 20000); 
 }
+
 
 /********************************************************************/
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const expanded = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", !expanded);
 
-      // Selecciona el siguiente elemento con la clase .desc para mostrar/ocultar
       const answer = button.closest(".faqs__pregunta").querySelector(".desc");
       if (answer) {
         answer.style.display = expanded ? "none" : "block";
@@ -242,127 +246,7 @@ function closeModal() {
   document.getElementById("articleModal").style.display = "none";
 }
 
-/*************Formulario********************/
-/*
-document.querySelector(".wf1").addEventListener("submit", function (e) {
-  e.preventDefault();
 
-  const nome = document.querySelector(".nome").value.trim();
-  const email = document.querySelector(".email").value.trim();
-  const phone = document.querySelector(".phone").value.trim();
-  const roupa = document.querySelector("#roupa").value;
-
-  if (!nome || !email || !validarEmail(email) || !validarTelefone(phone)) {
-    mostrarMensaje("Por favor, preencha o formulário corretamente.");
-    return;
-  }
-
-  const formData = {
-    nome,
-    email,
-    phone,
-    roupa,
-    quantidade: document.querySelector('input[name="fnum"]').value,
-    servico: Array.from(document.querySelector('.services__options').selectedOptions).map(opt => opt.value),
-    data: document.querySelector("#date").value,
-    orcamentoVias: Array.from(document.querySelectorAll("input[type='checkbox']:checked")).map(cb => cb.value),
-    detalhes: document.querySelector("#written-text").value
-  };
-
-  localStorage.setItem("formData", JSON.stringify(formData));
-
-  mostrarMensaje("Obrigado pela sua solicitação de Orçamento ou Contato! <br> Sua solicitação foi enviada com sucesso!", true);
-
-  setTimeout(() => {
-    window.location.href = "#inicio";
-  }, 2000);
-});
-
-function validarEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function validarTelefone(phone) {
-//  return /^\d{3}[-\s]?\d{3}[-\s]?\d{4}$/.test(phone);
-  return /^\d{3}([-\s]?)\d{3}\1\d{4}$/.test(phone);
-}
-
-function mostrarMensaje(mensaje, success = false) {
-  const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = mensaje;
-  messageDiv.style.backgroundColor = success ? "#41b883" : "#ff4d4d";
-  messageDiv.style.display = "block";
-  setTimeout(() => {
-    messageDiv.style.display = "none";
-  }, 2000);
-}
-*/
-/*
-document.querySelector(".wf1").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const nome = document.querySelector(".nome").value.trim();
-  const email = document.querySelector(".email").value.trim();
-  const phone = document.querySelector(".phone").value.trim();
-  const roupa = document.querySelector("#roupa").value;
-  const servicesOptionsSelected = Array.from(document.querySelector(".services__options").selectedOptions).map(option => option.value);
-
-  if (!nome || !email || !validarEmail(email) || !validarTelefone(phone)) {
-    mostrarMensaje("Por favor, preencha o formulário corretamente.");
-    return;
-  }
-
-  // Crear objeto con los datos del formulario
-  const formData = {
-    nome,
-    email,
-    phone,
-    roupa,
-    quantidade: document.querySelector('input[name="fnum"]').value,
-    servico: servicesOptionsSelected,
-    data: document.querySelector("#date").value,
-    orcamentoVias: Array.from(document.querySelectorAll("input[type='checkbox']:checked")).map(cb => cb.value),
-    detalles: document.querySelector("#written-text").value
-  };
-
-  // Recuperar datos existentes en localStorage
-  let savedData = JSON.parse(localStorage.getItem("formData")) || [];
-  
-  // Añadir el nuevo registro al arreglo existente
-  savedData.push(formData);
-
-  // Guardar el arreglo actualizado en localStorage
-  localStorage.setItem("formData", JSON.stringify(savedData));
-
-  // Mostrar mensaje de éxito
-  mostrarMensaje("Obrigado pela sua solicitação de Orçamento ou Contato! <br> Sua solicitação foi enviada com sucesso!", true);
-
-  // Redireccionar después de 2 segundos
-  setTimeout(() => {
-    window.location.href = "#inicio";
-  }, 2000);
-});
-
-function validarEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function validarTelefone(phone) {
-  return /^\d{3}[- ]?\d{3}[- ]?\d{4}$/.test(phone);
-}
-
-function mostrarMensaje(mensaje, success = false) {
-  const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = mensaje;
-  messageDiv.style.backgroundColor = success ? "#41b883" : "#ff4d4d";
-  messageDiv.style.display = "block";
-  setTimeout(() => {
-    messageDiv.style.display = "none";
-  }, 2000);
-}
-*/
-
-// Inicializa las opciones del campo "services__options" en el DOM
 
 document.addEventListener("DOMContentLoaded", function () {
   const selectElements = document.querySelectorAll(".services__options");
@@ -423,7 +307,6 @@ document.querySelector(".wf1").addEventListener("submit", function (e) {
     detalles: document.querySelector("#written-text").value,
   };
 
-  // Inicializa las opciones del campo "services__options" en el DOM
   document.addEventListener("DOMContentLoaded", function () {
     const selectElements = document.querySelectorAll(".services__options");
 
@@ -436,7 +319,7 @@ document.querySelector(".wf1").addEventListener("submit", function (e) {
           servicesOptions[group].forEach((optionText) => {
             const option = document.createElement("option");
             option.textContent = optionText;
-            option.value = optionText; // Asegúrate de que cada opción tenga un valor
+            option.value = optionText; 
             optgroup.appendChild(option);
           });
 
@@ -453,27 +336,21 @@ document.querySelector(".wf1").addEventListener("submit", function (e) {
     }
   });
 
-  // Recuperar datos existentes en localStorage o inicializar como arreglo vacío
   let savedData = JSON.parse(localStorage.getItem("formData")) || [];
 
-  // Asegúrate de que savedData es un arreglo
   if (!Array.isArray(savedData)) {
     savedData = [];
   }
 
-  // Añadir el nuevo registro al arreglo existente
   savedData.push(formData);
 
-  // Guardar el arreglo actualizado en localStorage
   localStorage.setItem("formData", JSON.stringify(savedData));
 
-  // Mostrar mensaje de éxito
   mostrarMensaje(
     "Obrigado pela sua solicitação de Orçamento ou Contato! <br> Sua solicitação foi enviada com sucesso!",
     true
   );
 
-  // Redireccionar después de 2 segundos
   setTimeout(() => {
     window.location.href = "#inicio";
   }, 2000);
